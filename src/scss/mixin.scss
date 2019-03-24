@@ -1,0 +1,19 @@
+@mixin reg {
+  font-family: 'OpenSansRegular', sans-serif;
+  font-weight: 400;
+}
+
+@mixin ital {
+  font-family: 'OpenSansSemibold', sans-serif;
+  font-weight: 400;
+}
+
+@mixin light {
+  font-family: 'OpenSansLight', sans-serif;
+  font-weight: 300;
+}
+
+@mixin bold {
+  font-family: 'OpenSansBold', sans-serif;
+  font-weight: 700;
+}

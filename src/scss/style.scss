@@ -1,0 +1,58 @@
+@import "vars.scss";
+@import "fonts.scss";
+@import "mixin";
+//@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  //font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+div, p, span, button, a {
+  box-sizing: border-box;
+}
+
+p, h2, h3, a, ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+//.wrapper {
+//  width: 1200px;  //85%
+//  margin: 0 auto;
+//  padding: 0 20px;
+//  //margin: 0 7%;
+//  position: relative;
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "./media.scss";
