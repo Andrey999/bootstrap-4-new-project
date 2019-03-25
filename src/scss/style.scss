@@ -41,7 +41,25 @@ ul {
 //  position: relative;
 //}
 
+.header {
+  background-color: #fff;
+  padding: 20px 0;
+}
 
+.menu__list-item {
+  margin-left: 37px;
+}
+
+.menu__list-link {
+  @include semi;
+  font-size: $font;
+  color: $text-color;
+
+  &:hover {
+    text-decoration: none;
+    color: #868686;
+  }
+}
 
 
 
