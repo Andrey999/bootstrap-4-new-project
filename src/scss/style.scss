@@ -9,6 +9,7 @@ html, body {
 
 body {
   //font-family: 'Roboto', sans-serif;
+  @include reg;
   font-size: 16px;
   box-sizing: border-box;
 }
@@ -33,6 +34,22 @@ ul {
   padding-inline-start: 0;
 }
 
+.btn {
+  padding: 10px 25px;
+  color: #fff;
+  margin: 0 10px;
+  border: none;
+  outline: none;
+  transition: .2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  cursor: pointer;
+
+
+  &:hover {
+    background: darken(#00897b, 10%);
+    border: 2px solid darken(#00897b, 10%);
+  }
+}
+
 //.wrapper {
 //  width: 1200px;  //85%
 //  margin: 0 auto;
@@ -51,9 +68,9 @@ ul {
 }
 
 .menu__list-link {
-  @include semi;
   font-size: $font;
   color: $text-color;
+  transition: .2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
 
   &:hover {
     text-decoration: none;
@@ -62,7 +79,60 @@ ul {
 }
 
 
+//    main  image
+.main__image {
+  background-image: url(../img/header.png);
+  background-position: 0 100%;
+  background-size: cover;
+  padding: 180px 0;
+  text-align: center;
+  color: #fff;
+}
 
+.main__image-title {
+  font-size: 55px;
+}
+
+.main__image-text {
+  font-size: 20px;
+  margin-bottom: 100px;
+}
+
+.btn_empty{
+  background-color: transparent;
+  border: 2px solid #fff;
+  text-transform: uppercase
+}
+
+.btn_hover {
+  background: #00897b;
+  border: 2px solid #00897b;
+  text-transform: uppercase;
+}
+
+///////////////   SECTION  ABOUT  US    /////////////////////
+.about {
+  text-align: center;
+  padding: 120px 125px;
+}
+
+.about__title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.about__text{
+  font-size: 15px;
+  padding-top: 10px;
+  margin-bottom: 100px;
+  color: #212121;
+}
+
+.about__title-bottom {
+  padding: 10px 20px;
+  @include reg;
+  font-size: 20px;
+}
 
 
 
