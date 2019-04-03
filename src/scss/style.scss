@@ -12,6 +12,7 @@ body {
   @include reg;
   font-size: 16px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 a {
@@ -34,22 +35,6 @@ ul {
   padding-inline-start: 0;
 }
 
-.btn {
-  padding: 10px 25px;
-  color: #fff;
-  margin: 0 10px;
-  border: none;
-  outline: none;
-  transition: .2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
-  cursor: pointer;
-
-
-  &:hover {
-    background: darken(#00897b, 10%);
-    border: 2px solid darken(#00897b, 10%);
-  }
-}
-
 //.wrapper {
 //  width: 1200px;  //85%
 //  margin: 0 auto;
@@ -70,7 +55,7 @@ ul {
 .menu__list-link {
   font-size: $font;
   color: $text-color;
-  transition: .2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition: .3s cubic-bezier(0.895, 0.03, 0.685, 0.22);
 
   &:hover {
     text-decoration: none;
@@ -98,16 +83,21 @@ ul {
   margin-bottom: 100px;
 }
 
-.btn_empty{
-  background-color: transparent;
-  border: 2px solid #fff;
-  text-transform: uppercase
-}
-
-.btn_hover {
+.button {
+  padding: 10px 25px;
+  color: #fff;
+  margin: 0 10px;
+  outline: none;
+  transition: .3s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  cursor: pointer;
   background: #00897b;
   border: 2px solid #00897b;
   text-transform: uppercase;
+
+  &:hover {
+    background: transparent;
+    border: 2px solid #fff;
+  }
 }
 
 ///////////////   SECTION  ABOUT  US    /////////////////////
@@ -116,23 +106,149 @@ ul {
   padding: 120px 125px;
 }
 
-.about__title {
+.about__title,
+.services__title,
+.portfolio__title {
   font-size: 30px;
   font-weight: bold;
 }
 
-.about__text{
+.about__text,
+.services__text,
+.portfolio__text {
   font-size: 15px;
-  padding-top: 10px;
+  padding-top: 20px;
   margin-bottom: 100px;
   color: #212121;
 }
 
-.about__title-bottom {
+.about__title-bottom,
+.services__title-bottom {
   padding: 10px 20px;
   @include reg;
   font-size: 20px;
 }
+
+//////////////////  SECTION   SERVICES   ////////////////////////////
+.services {
+  background-color: #e4fdf9;
+  text-align: center;
+  padding: 100px 0 100px;
+}
+
+.services__card {
+  position: relative;
+  background-color: #fff;
+  padding: 50px 25px 40px;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: .2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+
+  img {
+    padding-left: 15px;
+  }
+
+  &:hover {
+    background-color: #00897b;
+    color: #fff;
+    box-shadow: 0 10px 12px -3px rgba(0,0,0,.26);
+  }
+
+  &:hover .services__button {
+    color: #fff;
+    border: 1px solid;
+  }
+}
+
+.services__text-bottom {
+  line-height: 25px;
+}
+
+.services__button {
+  @include semi;
+  padding: 10px 11px 12px;
+  background-color: transparent;
+  border: 1px solid #000;
+  margin-top: 25px;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+}
+
+//////////////////// section  portfolio  ////////////////////////
+.portfolio {
+  text-align: center;
+  padding: 120px 0 40px;
+
+  .button:hover {
+    color: #000;
+    border: 2px solid #00897b;
+  }
+}
+////////////////////// section  tabs  //////////////////////////
+.tabs__image {
+  padding: 120px 0;
+}
+
+.js-tab-content {
+  display: none;
+}
+
+.image__hover {
+  width: 370px;
+  height: 370px;
+  position: relative;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  opacity: 1;
+  text-align: center;
+  transition: .2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+
+  &:hover .image__hover-text,
+  &:hover .image__hover-text-bottom {
+    opacity: 1;
+  }
+
+  &:hover img {
+    opacity: .9;
+  }
+}
+// show  text  on  hover
+.image__hover-text,
+.image__hover-text-bottom {
+  position: absolute;
+  font-size: 25px;
+  line-height: 53px;
+  color: #fff;
+  top: 0;
+  left: 33%;
+  opacity: 0;
+}
+
+.image__hover-text { top: 140px; }
+.image__hover-text-bottom { top: 200px; font-size: 21px; }
+
+//  class  for buttons
+.active {
+  background-color: transparent;
+  color: #000;
+}
+//  class  for   tabs  contents
+.active-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+/////////// section   pricing  ////////////////
+.pricing {
+  text-align: center;
+  background-color: #f0f1f1;
+  padding: 100px 0 100px;
+}
+
+
+
 
 
 
