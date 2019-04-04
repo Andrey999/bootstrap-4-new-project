@@ -46,6 +46,7 @@ ul {
 .header {
   background-color: #fff;
   padding: 20px 0;
+  transition: .3s ease-in-out;
 }
 
 .menu__list-item {
@@ -246,6 +247,145 @@ ul {
   background-color: #f0f1f1;
   padding: 100px 0 100px;
 }
+
+.price {
+  background-color: #fff;
+  transition: .2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+
+  &:hover {
+          box-shadow: 0 0 11px 3px rgba(0,0,0,0.39);
+  }
+}
+
+.price__head {
+  color: #fff;
+  padding: 40px 0 60px;
+  background-image: url(../../src/img/pricing_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 211px;
+
+  p:first-child {
+    font-size: 25px;
+  }
+
+  p:last-child {
+    font-size: 40px;
+    margin-top: 30px;
+  }
+
+  sup {
+    font-size: 25px;
+  }
+
+  sub {
+    font-size: 17px;
+  }
+}
+
+.price__body {
+  font-size: 17px;
+  color: #212121;
+
+  li {
+    margin: 0 auto;
+    border-bottom: 1px solid #bfbfbf;
+    max-width: 175px;
+    padding: 28px 0 12px;
+  }
+}
+
+.price__footer {
+  padding: 60px 0;
+
+  button {
+    border: 2px solid #212121;
+    color: #212121;
+    background-color: transparent;
+    width: 170px;
+    height: 60px;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    transition: .2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+
+    &:hover {
+      text-transform: uppercase;
+      color: #fff;
+      background: #00897b;
+      border: 2px solid #00897b;
+    }
+  }
+}
+
+//////////////  section   team    ///////////////
+.team {
+  padding: 100px 0 100px;
+  text-align: center;
+}
+
+.slider__wrap {
+  text-align: center;
+  width: 350px  !important;
+
+  img {
+    width: 350px;
+  }
+
+  h4 {
+    margin-top: 30px;
+    font-size: 20px;
+    @include semi;
+  }
+
+  p {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+
+}
+
+.social__icons {
+  display: flex;
+  justify-content: center;
+
+  a {
+    transition: .3s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    i:first-child {
+      color: rgba(204,204,204, .3);
+    }
+
+    i:last-child {
+      color: #00897b;
+    }
+
+    &:hover i:first-child { color: #3949ab; }
+    &:hover i:last-child { color: #fff; }
+  }
+}
+/////  slick-slider-styles ///////
+.dots-style {
+  margin-top: 115px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .slick-active button {  background-color: #3949ab; }
+
+  button {
+    background-color: #00897b;
+    border: none;
+    border-radius: 50%;
+    font-size: 0;
+    height: 15px;
+    width: 15px;
+    margin: 5px;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+
 
 
 
