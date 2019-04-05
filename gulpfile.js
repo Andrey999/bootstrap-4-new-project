@@ -2,8 +2,9 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const babel = require('gulp-babel');
 const jquery = require('jquery');
+// const slick = require('slick-carousel');
 const  plumber = require('gulp-plumber'); // вывод ошибок в терминал
-const cache = require('gulp-cache');  //
+const cache = require('gulp-cache');  //  кеширование
 const imagemin = require('gulp-imagemin'); // минификация изображений
 const concat = require('gulp-concat'); // конкатенация файлов в один
 const autoprefixer = require('gulp-autoprefixer'); // автопрефиксы
@@ -25,6 +26,9 @@ const plumberOptions = {
 //  записываем в переменную какие css файлы будем обрабатывать
 const sassAllFiles = [
     'node_modules/normalize.css/normalize.css',
+    'node_modules/slick-carousel/slick/slick.scss',
+    'node_modules/slick-carousel/slick/slick-theme.scss',
+    'node_modules/wowjs/css/libs/animate.css',
     './src/scss/style.scss'
 ];
 
@@ -46,6 +50,10 @@ function sassStyles() {
 
 //  записываем в переменную какие js файлы будем обрабатывать
 const jsFiles = [
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/slick-carousel/slick/slick.js',
+    'node_modules/lax.js/lib/lax.js',
+    'node_modules/wowjs/dist/wow.js',
     './src/js/main.js'
 ];
 

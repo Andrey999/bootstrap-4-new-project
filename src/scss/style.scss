@@ -46,7 +46,16 @@ ul {
 .header {
   background-color: #fff;
   padding: 20px 0;
-  transition: .3s ease-in-out;
+  transition: .4s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+
+  &.active-header {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .menu__list-item {
@@ -69,6 +78,7 @@ ul {
 .main__image {
   background-image: url(../img/header.png);
   background-position: 0 100%;
+  background-repeat: no-repeat;
   background-size: cover;
   padding: 180px 0;
   text-align: center;
@@ -385,7 +395,9 @@ ul {
   }
 }
 
-
+.wow {
+  visibility: hidden;
+}
 
 
 

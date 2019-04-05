@@ -16,10 +16,23 @@ window.onload = function() {
         });
     });
 
- 
+    /////////////// parallax  image  ////////////////////
+    const parallax = () => {
+        let wScroll = $(window).scrollTop(); // записываем в переменную  прокрутку сверху
+        $('.parallax--bg').css('background-position', 'center ' + (wScroll *0.75) + 'px'); //прокручиваем картинку по х: center | y = (wScroll *0.75);
+    };
+
+    $(window).scroll(() => {  // при прокрутке вызываем функцию parallax
+        parallax();
+
+        if ($(window).scrollTop()) { //  если есть прокрутка
+             $(".header").addClass('active-header');  //  добавляем класс
+        }
+        else { $(".header").removeClass('active-header'); }  // удаляем класс
+    });
 
 
-   ///////  settings  for  slick - slider  //////////
+   ///////  settings  for   plugin   slick - slider - js //////////
     $('.multiple-items').slick({
         infinite: true,
         slidesToShow: 3,
@@ -30,7 +43,17 @@ window.onload = function() {
     });
 
 
+    ///////////// intialize  plugin   lax.js  /////////////////
+        lax.setup(); // init
 
+        const updateLax = () => {
+            lax.update(window.scrollY);
+            window.requestAnimationFrame(updateLax);
+        };
+        window.requestAnimationFrame(updateLax);
+
+    ////////////  initialize  plugin  wow - js ///////////////////////
+        new WOW().init();
 };
 
 
