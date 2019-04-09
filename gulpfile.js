@@ -1,8 +1,6 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const babel = require('gulp-babel');
-const jquery = require('jquery');
-// const slick = require('slick-carousel');
+const gulp = require('gulp'); //gulp
+const sass = require('gulp-sass'); // sass
+const babel = require('gulp-babel'); // компиляция es-6 
 const  plumber = require('gulp-plumber'); // вывод ошибок в терминал
 const cache = require('gulp-cache');  //  кеширование
 const imagemin = require('gulp-imagemin'); // минификация изображений
