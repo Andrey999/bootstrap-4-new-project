@@ -1,0 +1,128 @@
+.footer {
+  padding-top: 165px;
+  padding-bottom: 125px;
+  color: #fff;
+  background-image: url(../../src/img/footer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+
+  .services__text {
+    color: #fff;
+  }
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #3949ab;
+  margin: 0 auto 35px;
+  cursor: pointer;
+  transition: .4s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+
+  &:hover {
+    background: lighten(#3949ab, 15%);
+  }
+}
+
+.footer__text {
+  font-size: 20px;
+
+  & a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+.fa-map-marker-alt,
+.fa-phone,
+.fa-envelope {
+  font-size: 62px;
+  color: #fff;
+}
+
+///////////////////////////    form    ///////////////////////////////////
+.form {
+  margin-top: 70px;
+}
+
+.input__name,
+.input__email,
+.input__textarea {
+  width: 90%;
+  padding: 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  outline: none;
+}
+
+.input__email {
+  margin-left: 10%;
+}
+
+.input__textarea {
+  width: 100%;
+  margin: 30px 0 30px;
+  resize: none;
+}
+
+.form__button {
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 20px 80px;
+  margin-left: 25px;
+  color: #212121;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  transition: .4s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+
+  &:hover {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+}
+
+.copyright {
+  padding: 30px 0;
+
+
+  & p {
+    text-align: center;
+    @include semi;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

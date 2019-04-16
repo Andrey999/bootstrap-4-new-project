@@ -16,6 +16,21 @@ window.onload = function() {
         });
     });
 
+    ////////////// добавление инпута по клику вместо иконки search/////////////////////////
+    let iconSearch = document.getElementById('fa-search');
+    let input = document.getElementById('search');
+    iconSearch.onclick = function() {
+        this.style.opacity = 0;
+        input.style.opacity = 1;
+        input.focus();
+
+        input.onblur = function() {
+            iconSearch.style.opacity = 1;
+            input.style.opacity = 0;
+            input.value = '';
+        };
+    };
+
     /////////////// parallax  image  ////////////////////
     const parallax = () => {
         let wScroll = $(window).scrollTop(); // записываем в переменную  прокрутку сверху
@@ -55,9 +70,3 @@ window.onload = function() {
     ////////////  initialize  plugin  wow - js ///////////////////////
         new WOW().init();
 };
-
-
-
-
-
-
