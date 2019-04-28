@@ -36,6 +36,23 @@ ul {
   padding-inline-start: 0;
 }
 
+.toTop {
+  z-index: 999;
+  width: 40px;
+  height: 40px;
+  border: none;
+  font-size: 25px;
+  border-radius: 3px;
+  background: #00897b;
+  text-align: center;
+  padding: 5px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: none;
+  color: #000;
+}
+
 //.wrapper {
 //  width: 1200px;  //85%
 //  margin: 0 auto;
@@ -47,7 +64,7 @@ ul {
 .header {
   background-color: #fff;
   padding: 20px 0;
-  transition: .4s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition: .3s ease;
 
   &.active-header {
     position: fixed;
@@ -502,12 +519,5 @@ ul {
 .yandex__map {
   width: 100%;
 }
-
-
-
-
-
-
-
 
 @import "./media.scss";

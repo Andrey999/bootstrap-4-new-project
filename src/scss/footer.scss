@@ -83,7 +83,7 @@
   border-radius: 10px;
   outline: none;
   cursor: pointer;
-  transition: .4s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+      transition: .4s cubic-bezier(0.895, 0.03, 0.685, 0.22);
 
   &:hover {
     background-color: transparent;

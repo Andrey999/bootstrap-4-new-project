@@ -1,4 +1,18 @@
 window.onload = function() {
+    ////////////////  mobile--menu  /////////////
+    $('.menu__icon-btn').on('click', function() {
+        $('.navigation__menu').slideToggle(500);
+        $('.menu__list').css({
+            'display': 'flex', 'flex-direction': 'column'
+        });
+        if($('.menu__icon-btn').html() == '<i class="fas fa-bars"></i>') {
+            $(this).html('<i class="fas fa-times"></i>')
+        }else {
+            $(this).html('<i class="fas fa-bars"></i>')
+        }
+    });
+
+    ////////////////// tabs ////////////////////////
     let jsTriggers = document.querySelectorAll('.js-btn');
 
     jsTriggers.forEach(function(trigger) {
@@ -31,6 +45,37 @@ window.onload = function() {
         };
     };
 
+    ///////////////////////// плавная прокрутка элементов к якорю  //////////////////////////////
+    $('.menu__list li a').on('click', function () {
+        let target = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(target).offset().top
+        }, 500);
+        $('.menu__list li a').css('color', '#717171');
+        $(this).css('color', '#004bee');
+        return false;
+    });
+
+
+    /////////////////////  кнопка наверх ///////////////////////////
+    $(window).on('scroll', function () {
+        if($(this).scrollTop() > 800) {  // если прокрутка больше 800
+            $('#toTop').fadeIn(); //  показать  кнопку
+        } else  {
+            $('#toTop').fadeOut();
+            $('.menu__list li a').css('color', '#717171');
+        } // убрать  кнопку
+    });
+
+    ////////////////////  при клике на кнопку     /////////////////
+    $('#toTop').on('click', function () {
+        $('html, body').animate({
+            scrollTop: 0
+        },600);
+    });
+
+
+
     /////////////// parallax  image  ////////////////////
     const parallax = () => {
         let wScroll = $(window).scrollTop(); // записываем в переменную  прокрутку сверху
@@ -40,7 +85,7 @@ window.onload = function() {
     $(window).scroll(() => {  // при прокрутке вызываем функцию parallax
         parallax();
 
-        if ($(window).scrollTop()) { //  если есть прокрутка
+        if ($(window).scrollTop()>750 ) { //  если есть прокрутка
              $(".header").addClass('active-header');  //  добавляем класс
         }
         else { $(".header").removeClass('active-header'); }  // удаляем класс
@@ -54,7 +99,30 @@ window.onload = function() {
         slidesToScroll: 3,
         arrows: false,
         dots: true,
-        dotsClass: 'dots-style'
+        dotsClass: 'dots-style',
+
+        responsive: [{
+
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                infinite: true
+            }
+
+        }, {
+
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                dots: true
+            }
+
+        }, {
+
+            breakpoint: 300,
+            settings: "unslick" // destroys slick
+
+        }]
     });
 
 
