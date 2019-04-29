@@ -50,9 +50,7 @@ window.onload = function() {
         let target = $(this).attr('href');
         $('html, body').animate({
             scrollTop: $(target).offset().top
-        }, 500);
-        $('.menu__list li a').css('color', '#717171');
-        $(this).css('color', '#004bee');
+        }, 2000);
         return false;
     });
 
@@ -63,7 +61,6 @@ window.onload = function() {
             $('#toTop').fadeIn(); //  показать  кнопку
         } else  {
             $('#toTop').fadeOut();
-            $('.menu__list li a').css('color', '#717171');
         } // убрать  кнопку
     });
 
@@ -71,7 +68,7 @@ window.onload = function() {
     $('#toTop').on('click', function () {
         $('html, body').animate({
             scrollTop: 0
-        },600);
+        },1000);
     });
 
 
@@ -103,7 +100,7 @@ window.onload = function() {
 
         responsive: [{
 
-            breakpoint: 1024,
+            breakpoint: 992,
             settings: {
                 slidesToShow: 2,
                 infinite: true
