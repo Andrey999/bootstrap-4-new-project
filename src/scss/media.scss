@@ -41,7 +41,6 @@
     margin-top: 60px;
   }
 
-
   // section__blog
   .left img,
   .right img {
@@ -123,11 +122,85 @@
   .price {
     margin-bottom: 35px;
   }
+
+  //slider
+  .fa-stack {
+    width: 2.5em;
+  }
+
+  // section__blog
+  .left>div:first-child,
+  .right>div:first-child {
+    order: 0;
+  }
 }
 
 /*   less  768px     */
 @media screen and (max-width: 768px) {
-  
+
+  .menu__icon-btn {
+    margin-left: 0;
+  }
+
+  //services
+  .services {
+    padding: 60px 0;
+  }
+
+  //  tabs
+  .button {
+    padding: 10px 11px;
+  }
+
+  .tabs__image {
+    padding: 55px 0 5px;
+  }
+
+  .image__hover-text {
+    display: none;
+  }
+
+  .image__hover {
+    height: 215px;
+  }
+
+  //slider
+  .slider__wrap img {
+    width: 250px;
+  }
+
+  .slider__wrap {
+    width: 250px !important;
+  }
+
+  .fa-stack {
+    width: 1.9em;
+  }
+
+  // section blog
+  .blog__button {
+    margin-top: 70px;
+  }
+
+  //footer
+  .footer__text {
+    margin-bottom: 15px;
+  }
+
+  //form
+  .input__name,
+  .input__email {
+    margin-left: -15px;
+    width: 100%;
+  }
+
+  .input__name {
+    margin-bottom: 15px;
+  }
+
+  .input__textarea {
+    margin: 15px -15px 15px;
+  }
 }
 
 
