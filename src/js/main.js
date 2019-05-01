@@ -114,6 +114,15 @@ window.onload = function() {
                 dots: true
             }
 
+        },{
+
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: false
+            }
+
         }, {
 
             breakpoint: 300,

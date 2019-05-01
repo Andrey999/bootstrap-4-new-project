@@ -207,10 +207,163 @@
 
 /*   less  576px     */
 @media screen and (max-width: 576px) {
+  // header
+  .main__image {
+    padding: 70px 0;
+  }
+
+  .main__image-title {
+    font-size: 46px;
+  }
+
+  .main__image-text {
+    margin-bottom: 65px;
+  }
+
+  .button {
+    padding: 10px 8px;
+    margin: 0;
+  }
+
+  // about
+  .about {
+    padding: 90px 10px;
+  }
+
+  .img-transfer,
+  .img-head {
+    margin-top: 25px;
+  }
+
+  //portfolio
+  .portfolio {
+    padding: 80px 0 40px;
+  }
+
+  .image__hover {
+    height: 380px;
+  }
+
+
+  //pricing
+  .pricing {
+    padding: 80px 3px;
+  }
+
+  //team
+  .team {
+    padding: 50px 10px;
+  }
+
+  //services
+  .services {
+    padding: 50px 0;
+  }
+
+  .blog {
+    margin: 25px 0;
+  }
+
+  .blog__icon {
+    margin: 15px 0 20px;
+  }
+
+  .blog__icon span {
+    font-size: 15px;
+    margin-right: 10px;
+  }
+
+  .blog__icon span i {
+    margin-right: 17px;
+  }
+
+  .blog__button {
+    width: 180px;
+    height: 50px;
+    font-size: 17px;
+  }
+
+  .blog__button {
+    margin-top: 50px;
+  }
+
+  //footer
+  .footer {
+    padding: 100px 15px;
+  }
+
+  .footer__text,
+  .footer__text a {
+    font-size: 18px;
+  }
+
+  .circle {
+    width: 90px;
+    height: 90px;
+  }
+
+  .fa-map-marker-alt,
+  .fa-phone,
+  .fa-envelope {
+    font-size: 45px;
+  }
+
+  //form
+  .input__email,
+  .input__name,
+  .input__textarea {
+    padding: 18px;
+  }
+
+
+  .input__name,
+  .input__email {
+    margin-left: -5px;
+    width: 100%;
+  }
+
+  .input__name {
+    margin-bottom: 15px;
+  }
+
+  .input__textarea {
+    margin: 15px -5px 15px;
+  }
+
+  .form__button {
+    font-size: 16px;
+    padding: 12px 50px;
+  }
+}
+
+//  less  than  440px
+@media screen and (max-width: 440px) {
+  .button {
+    width: 125px;
+    margin: 3px 5px;
+    white-space: nowrap;
+  }
+
+  .image__hover {
+    height: 310px;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .image__hover img {
+    max-width: 90%;
+  }
 
 }
 
-
+// less than 376px    for tabs image
+//@media screen and (max-width: 376px) {
+//  .image__hover {
+//    height: 275px;
+//    width: 100%;
+//  }
+//
+//}
 
 
 
