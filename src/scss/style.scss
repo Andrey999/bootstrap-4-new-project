@@ -64,7 +64,7 @@ ul {
 .header {
   background-color: #fff;
   padding: 20px 0;
-  transition: .3s ease;
+  transition: .3s ease-in;
 
   &.active-header {
     position: fixed;
@@ -73,6 +73,7 @@ ul {
     left: 0;
     width: 100%;
     padding: 0;
+    border-bottom: 1px solid #ccc;
   }
 }
 
